@@ -1,0 +1,629 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Fri Nov 18 2022 19:01:49 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6311249bb7275703003bb71f" data-wf-site="6311249bb727571ee13bb71c">
+<head>
+  <meta charset="utf-8">
+  <title>How do you add CMS Filters in Webflow?</title>
+  <meta content="Use Refokus CMS Filters to create one or more filter sets (also possible as individual CMS Collections) to filter results on a CMS collection list. The core is based on the core form elements (Input, Dropdown, Checkbox, and Radio Buttons) which you can use to create any type of filtering UI, such as toggles, tags, tabs, switches, and anything else you can visually imagine! Additionally, the input element can be used to create live search filtering results on the collection item." name="description">
+  <meta content="How do you add CMS Filters in Webflow?" property="og:title">
+  <meta content="Use Refokus CMS Filters to create one or more filter sets (also possible as individual CMS Collections) to filter results on a CMS collection list. The core is based on the core form elements (Input, Dropdown, Checkbox, and Radio Buttons) which you can use to create any type of filtering UI, such as toggles, tags, tabs, switches, and anything else you can visually imagine! Additionally, the input element can be used to create live search filtering results on the collection item." property="og:description">
+  <meta content="https://uploads-ssl.webflow.com/60dee237ed94659eefff0d9b/60f10f7a3965cf94831ebbb6_CMS%20Filters%20OG.jpg" property="og:image">
+  <meta content="How do you add CMS Filters in Webflow?" property="twitter:title">
+  <meta content="Use Refokus CMS Filters to create one or more filter sets (also possible as individual CMS Collections) to filter results on a CMS collection list. The core is based on the core form elements (Input, Dropdown, Checkbox, and Radio Buttons) which you can use to create any type of filtering UI, such as toggles, tags, tabs, switches, and anything else you can visually imagine! Additionally, the input element can be used to create live search filtering results on the collection item." property="twitter:description">
+  <meta content="https://uploads-ssl.webflow.com/60dee237ed94659eefff0d9b/60f10f7a3965cf94831ebbb6_CMS%20Filters%20OG.jpg" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/black-history-result.webflow.css" rel="stylesheet" type="text/css">
+  <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="24323c66-6332-db33-e64e-38bfb41a733d"] {-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="e954b58b-53e8-6f3e-e27f-51140d01fa4f"] {-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="19645028-cb71-db15-a142-84360d96f859"] {-webkit-transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="24323c66-6332-db33-e64e-38bfb41a733d"] {-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="e954b58b-53e8-6f3e-e27f-51140d01fa4f"] {-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="19645028-cb71-db15-a142-84360d96f859"] {-webkit-transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","DM Sans:regular,500"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+body { -webkit-font-smoothing: antialiased; }
+</style>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RefokusAgency">
+  <meta name="twitter:creator" content="@RefokusAgency">
+  <meta name="twitter:title" content="How do you add CMS Filters in Webflow?">
+  <meta name="twitter:description" content="Use Refokus CMS Filters to create one or more filter sets (also possible as individual CMS Collections) to filter results on a CMS collection list.">
+  <meta name="twitter:image" content="https://uploads-ssl.webflow.com/60dee237ed94659eefff0d9b/60f10f7a3965cf94831ebbb6_CMS%20Filters%20OG.jpg">
+  <script>
+  function copyToClipboard(element, text) {
+    const input = element.appendChild(document.createElement("input"));
+    input.value = text;
+    input.focus();
+    input.select();
+    document.execCommand('copy');
+    input.parentNode.removeChild(input);
+  }
+</script>
+  <style>
+  .slick-prev.slick-disabled {
+    opacity: 0.5;
+  }
+  .slick-next.slick-disabled {
+    opacity: 0.5;
+  }
+  .slick-list {
+    overflow: visible;
+  }
+  .c-slick-slide {display: inline-block;}
+  .c-slider {display:block !important;}
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus
+  {
+    outline: none;
+  }
+  .c-slick-slide, .c-slick-slide *{ outline: none !important; }
+  .slick-track {
+    cursor: grab;
+  }
+  @media only screen and (max-width: 1160px) and (min-width: 768px) {
+    .c-collection-item-movies {
+      width: 33.33%;
+    }
+    @media only screen and (min-width: 768px) {
+      .slick-slide {
+        outline: none;
+        transition: opacity 800ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: scale(.9);
+      }
+      .slick-slide.slick-active{
+        transform: scale(1);
+        z-index: -100;
+        cursor: -webkit-grab;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .slick-list {
+        overflow: hidden;
+      }
+    }
+  }
+  /* Range filter */
+  .ui-widget-content {
+    height: 2px !important;
+    background-color: #1A2028 !important;
+    border-radius: 2px !important;
+    border: none !important;
+  }
+  .ui-widget-header {
+    background-color: #255DEB !important;
+  }
+  .ui-slider-handle {
+    border-radius: 8px !important;
+    background-color: #255DEB !important;
+    width: 24px !important;
+    height: 24px !important;
+    outline: none !important;
+    border: none !important;
+    top: -10px !important;
+    cursor: pointer !important;
+    position: relative;
+  }
+  .ui-slider-handle::after {
+  	content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .ui-slider-handle.ui-state-hover {
+    background-color: #1E49B7 !important;
+    border: none !important;
+  }
+</style>
+</head>
+<body class="c-body">
+  <div class="c-custom-code w-embed">
+    <style>
+  body { -webkit-font-smoothing: antialiased; }
+  [vertical-align-middle]{
+    vertical-align: middle
+  }
+  [vertical-align-top]{
+    vertical-align: top
+  }
+  /* Avoid texts inside the dropdown toggle to go outside the dropdown box. 
+  For this we need to have the class of the Drodpown Toggle + the p or h inside */
+  .faq-dropdown p {
+    white-space: normal !important;
+  } */
+  .c-image-reveal_movement {
+    max-width: fit-content;
+  }
+#star {
+    -webkit-filter: drop-shadow( 0px 0px 2px #EFBA30);
+    filter: drop-shadow( 0px 0px 2px #EFBA30);
+  }
+select {
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  background: transparent;
+  background-image: url(https://uploads-ssl.webflow.com/60dee237ed94659eefff0d9b/60df1078240d4d8c279ecd6f_Select-icon.svg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+</style>
+  </div>
+  <nav data-w-id="19645028-cb71-db15-a142-84360d96f859" style="-webkit-transform:translate3d(0, -171px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -171px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -171px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -171px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="c-nav-search">
+    <div class="c-container cc-nav">
+      <div class="c-search">
+        <a href="https://webflow-tools.refokus.com/" target="_blank" class="c-search-logos w-inline-block">
+          <div class="c-logo"><img src="images/unnamed-1.png" loading="lazy" width="157" srcset="images/unnamed-1-p-500.png 500w, images/unnamed-1-p-800.png 800w, images/unnamed-1-p-1080.png 1080w, images/unnamed-1-p-1600.png 1600w, images/unnamed-1.png 1850w" sizes="157px" alt="" class="c-logo-refokus"></div>
+        </a>
+        <div class="c-search-search">
+          <div id="search-form" class="c-form-block-search w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" action="/" method="get" class="c-search-form"><input type="text" class="c-search-textfield w-input" maxlength="256" name="name" data-name="Name" r-filter="input" placeholder="Search History" id="name"></form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+          <div class="c-nav-links">
+            <div class="c-docs cc-hidden_mobile">
+              <div class="c-button-gradient">
+                <div class="c-gradient-right"></div>
+                <a href="https://webflow-tools.refokus.com/tools/cms-filters" target="_blank" class="c-button-m cc-border w-inline-block"><img src="images/Button-Icon.svg" alt="" class="c-button-icon-left"><img src="images/Button-Icon-Hover.svg" alt="" class="c-button-icon-left-hover">
+                  <div class="c-button-icon-content">
+                    <div>Connect Wallet</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="c-section cc-hero wf-section">
+    <div class="c-form-block-genre w-form">
+      <form method="get" name="email-form-3" data-name="Email Form 3" style="-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" data-w-id="24323c66-6332-db33-e64e-38bfb41a733d" action="/" id="email-form-3" class="c-slider-contain">
+        <div class="c-slider-nav">
+          <a href="#" class="slider-prev w-inline-block"></a>
+          <a href="#" class="slider-next w-inline-block"></a>
+        </div>
+        <div r-filter="Genre" class="c-slider">
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="11296686-c05d-bd52-ac03-6d9892233981"></div><input type="checkbox" id="Checkbox-Action" name="Checkbox-Action" data-name="Checkbox Action" style="opacity:0;position:absolute;z-index:-1">
+              <div class="c-custom-code w-embed">
+                <style>
+  body { -webkit-font-smoothing: antialiased; }
+  [vertical-align-middle]{
+    vertical-align: middle
+  }
+  [vertical-align-top]{
+    vertical-align: top
+  }
+  /* Avoid texts inside the dropdown toggle to go outside the dropdown box. 
+  For this we need to have the class of the Drodpown Toggle + the p or h inside */
+  .faq-dropdown p {
+    white-space: normal !important;
+  } */
+  .c-image-reveal_movement {
+    max-width: fit-content;
+  }
+#star {
+    -webkit-filter: drop-shadow( 0px 0px 2px #EFBA30);
+    filter: drop-shadow( 0px 0px 2px #EFBA30);
+  }
+select {
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  background: transparent;
+  background-image: url(https://uploads-ssl.webflow.com/60dee237ed94659eefff0d9b/60df1078240d4d8c279ecd6f_Select-icon.svg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+</style>
+              </div><span for="Checkbox-Action" class="c-checkbox-label-genre w-form-label">Action</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="820aa281-9823-0b75-a260-beec7157aa91"></div><input type="checkbox" id="Checkbox Animation" name="Checkbox-Animation" data-name="Checkbox Animation" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Animation" class="c-checkbox-label-genre w-form-label">Animation</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="6584c746-4fe0-7100-fdc3-060a9451f9d1"></div><input type="checkbox" id="Checkbox Comedy" name="Checkbox-Comedy" data-name="Checkbox Comedy" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Comedy" class="c-checkbox-label-genre w-form-label">Comedy</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="958c81f4-71ea-0eac-f810-5ae5831486f7"></div><input type="checkbox" id="Checkbox Drama" name="Checkbox-Drama" data-name="Checkbox Drama" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Drama" class="c-checkbox-label-genre w-form-label">Drama</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="744d2965-1eee-b6de-f8ae-886c2da88d5f"></div><input type="checkbox" id="Checkbox-Fantasy" name="Checkbox-Fantasy" data-name="Checkbox Fantasy" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Fantasy" class="c-checkbox-label-genre w-form-label">Fantasy</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="fe8e9e94-1ce2-e33e-2608-72dc4e57983a"></div><input type="checkbox" id="Checkbox Horror" name="Checkbox-Horror" data-name="Checkbox Horror" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Horror" class="c-checkbox-label-genre w-form-label">Horror</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="20b80dcd-d8c6-7e8a-bef3-8bb80075cc89"></div><input type="checkbox" id="Checkbox Romance" name="Checkbox-Romance" data-name="Checkbox Romance" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Romance" class="c-checkbox-label-genre w-form-label">Romance</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="4ffeada4-8d90-3877-b958-176eed662681"></div><input type="checkbox" id="Checkbox Scifi" name="Checkbox-Scifi" data-name="Checkbox Scifi" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Scifi" class="c-checkbox-label-genre w-form-label">Scifi</span>
+            </label></div>
+          <div class="c-slick-slide"><label class="w-checkbox c-checkbox-field-genre">
+              <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox" data-w-id="cc9b75e4-32f4-1c58-4b9f-fae92b504275"></div><input type="checkbox" id="Checkbox Thriller" name="Checkbox-Thriller" data-name="Checkbox Thriller" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Thriller" class="c-checkbox-label-genre w-form-label">Thriller</span>
+            </label></div>
+        </div>
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+    <div class="c-container">
+      <div data-w-id="e954b58b-53e8-6f3e-e27f-51140d01fa4f" class="c-grid">
+        <div class="c-grid-item cc-30 cc-fixed">
+          <div class="c-menu-nav_mobile">
+            <div class="c-search">
+              <div class="c-search-logos">
+                <a href="https://refokus.io/" target="_blank" class="c-logo w-inline-block"><img src="images/Logo-Refokus.svg" loading="lazy" alt="Refokus Logo." class="c-logo-refokus"></a>
+                <div class="c-text">
+                  <div class="c-text-x">x</div>
+                </div>
+                <div class="c-logo"><img src="images/Webflow.svg" loading="lazy" alt="Webflow Logo." class="c-logo-webflow"></div>
+              </div>
+              <div class="c-search-search cc-mobile">
+                <div id="search-form" class="c-form-block-search w-form">
+                  <form id="email-form" name="email-form" data-name="Email Form" action="/" method="get" class="c-search-form"><input type="text" class="c-search-textfield w-input" maxlength="256" name="name-2" data-name="Name 2" r-filter="input" placeholder="Search movies" id="name-2"><input type="submit" value="Submit" data-wait="Please wait..." class="c-submit cc-hidden w-button"></form>
+                  <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                  </div>
+                  <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                  </div>
+                </div>
+                <div class="c-nav-links">
+                  <div data-w-id="ac7e0bda-43ee-ae53-550a-68d16c6e021b" class="c-clone close-modal">
+                    <div class="c-button-gradient">
+                      <a data-w-id="ac7e0bda-43ee-ae53-550a-68d16c6e021d" href="#" class="c-button-settings w-inline-block">
+                        <div class="text-block">Apply</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="c-clone cc-hidden_mobile">
+                    <div class="c-button-gradient">
+                      <a href="#" class="c-button-m cc-border w-inline-block"><img src="images/Button-Icon-Clone.svg" alt="" class="c-button-icon-left"><img src="images/Button-Icon-Clone-Hover.svg" alt="" class="c-button-icon-left-hover">
+                        <div class="c-button-icon-content">
+                          <div>Clone</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="c-docs cc-hidden_mobile">
+                    <div class="c-button-gradient">
+                      <a href="#" class="c-button-m cc-border w-inline-block"><img src="images/Button-Icon.svg" alt="" class="c-button-icon-left"><img src="images/Button-Icon-Hover.svg" alt="" class="c-button-icon-left-hover">
+                        <div class="c-button-icon-content">
+                          <div>Docs</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collection-itemcount cc-mobile">
+                <p class="c-paragraph cc-count">Showing<br></p>
+                <p r-filter-visible-elements="1" class="c-paragraph cc-count"></p>
+                <p class="c-paragraph cc-count">of</p>
+                <p r-filter-total-elements="1" class="c-paragraph cc-count"></p>
+                <p class="c-paragraph cc-count">results</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-form-block-filters w-form">
+            <form id="email-form-2" name="email-form-2" data-name="Email Form 2" action="/" method="get" class="c-form-filters">
+              <div class="c-filter cc-premiere">
+                <div class="c-title-wrapper">
+                  <div class="c-premiere-icon"><img src="images/Ticket-Star.svg" loading="lazy" alt="" class="c-filter-icon"></div>
+                  <div class="c-premiere-title">
+                    <h3 class="c-title-3">Free</h3>
+                  </div>
+                </div>
+                <div r-filter="Checkbox" class="c-toggle-wrapper"><label class="w-checkbox c-checkbox-field-toggle">
+                    <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-toggle" data-w-id="df8198be-dad7-9d8b-72ac-c85b70e412b4"></div><input type="checkbox" name="Checkbox-Premiere" data-name="Checkbox Premiere" id="Checkbox Premiere" data-filter="Premiere" style="opacity:0;position:absolute;z-index:-1">
+                    <div data-is-ix2-target="1" class="lottie-animation" data-w-id="df8198be-dad7-9d8b-72ac-c85b70e412b5" data-animation-type="lottie" data-src="documents/lf20_53al6qcs.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.0166666666666666" data-duration="0" data-ix2-initial-state="50"></div><span for="Checkbox-Premiere" class="c-checkbox-label-toggle cc-hidden w-form-label">Checkbox 9</span>
+                  </label></div>
+              </div>
+              <div class="c-filter cc-select"><select id="Select" name="Select" data-name="Select" r-filter="select" class="c-select-field w-select">
+                  <option value="">Select one...</option>
+                  <option value="top rated">Top Rated</option>
+                  <option value="recommended">Recommeneded</option>
+                  <option value="most watched">Most Watched</option>
+                </select></div>
+              <div class="c-filter">
+                <div class="c-title-wrapper">
+                  <div class="c-premiere-icon"><img src="images/Chat.svg" loading="lazy" alt="" class="c-filter-icon"></div>
+                  <div class="c-premiere-title">
+                    <h3 class="c-title-3">Languages</h3>
+                  </div>
+                </div>
+                <div r-filter="Languages" class="c-languages">
+                  <div class="c-gradient-lang">
+                    <div class="c-gradient-right"></div><label class="w-checkbox c-checkbox-field-lang">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-lang"></div><input type="checkbox" id="Checkbox Eng" name="Checkbox-Eng" data-name="Checkbox Eng" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Eng" class="c-checkbox-label-lang w-form-label">English</span>
+                      <div class="c-checkbox-bg"></div>
+                    </label>
+                  </div>
+                  <div class="c-gradient-lang">
+                    <div class="c-gradient-right"></div><label class="w-checkbox c-checkbox-field-lang">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-lang"></div><input type="checkbox" id="Checkbox ESP" name="Checkbox-ESP" data-name="Checkbox ESP" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-ESP" class="c-checkbox-label-lang w-form-label">Spanish</span>
+                      <div class="c-checkbox-bg"></div>
+                    </label>
+                  </div>
+                  <div class="c-gradient-lang">
+                    <div class="c-gradient-right"></div><label class="w-checkbox c-checkbox-field-lang">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-lang"></div><input type="checkbox" id="Checkbox Fr" name="Checkbox-Fr" data-name="Checkbox Fr" style="opacity:0;position:absolute;z-index:-1"><span for="Checkbox-Fr" class="c-checkbox-label-lang w-form-label">French</span>
+                      <div class="c-checkbox-bg"></div>
+                    </label>
+                  </div>
+                  <div class="c-gradient-lang">
+                    <div class="c-gradient-right"></div><label class="w-checkbox c-checkbox-field-lang">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-lang"></div><input type="checkbox" id="checkbox-5" name="checkbox-5" data-name="Checkbox 5" style="opacity:0;position:absolute;z-index:-1"><span class="c-checkbox-label-lang w-form-label" for="checkbox-5">German</span>
+                      <div class="c-checkbox-bg"></div>
+                    </label>
+                  </div>
+                  <div class="c-gradient-lang">
+                    <div class="c-gradient-right"></div><label class="w-checkbox c-checkbox-field-lang">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-lang"></div><input type="checkbox" id="checkbox-4" name="checkbox-4" data-name="Checkbox 4" style="opacity:0;position:absolute;z-index:-1"><span class="c-checkbox-label-lang w-form-label" for="checkbox-4">Italian</span>
+                      <div class="c-checkbox-bg"></div>
+                    </label>
+                  </div>
+                  <div class="c-gradient-lang">
+                    <div class="c-gradient-right"></div><label class="w-checkbox c-checkbox-field-lang">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-lang"></div><input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3" style="opacity:0;position:absolute;z-index:-1"><span class="c-checkbox-label-lang w-form-label" for="checkbox-3">Japanese</span>
+                      <div class="c-checkbox-bg"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="c-filter">
+                <div class="c-title-wrapper">
+                  <div class="c-premiere-icon"><img src="images/Category.svg" loading="lazy" alt="" class="c-filter-icon"></div>
+                  <div class="c-premiere-title">
+                    <h3 class="c-title-3">Media Type</h3>
+                  </div>
+                </div>
+                <div r-filter="Platform" class="c-platform">
+                  <div class="c-checkbox-wrapper">
+                    <div class="c-text-label">Articles</div><label class="w-checkbox c-checkbox-field-toggle platform">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-toggle"></div><input type="checkbox" id="Checkbox Netflix" name="Checkbox-Netflix" data-name="Checkbox Netflix" data-filter="Netflix" style="opacity:0;position:absolute;z-index:-1">
+                      <div data-is-ix2-target="1" class="lottie-animation" data-w-id="f64a9968-a8a2-453c-6f01-5f0238f8688f" data-animation-type="lottie" data-src="documents/lf20_53al6qcs.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.0166666666666666" data-duration="0" data-ix2-initial-state="50"></div><span for="Checkbox-Netflix" class="c-checkbox-label-toggle w-form-label">Netflix</span>
+                    </label>
+                  </div>
+                  <div class="c-checkbox-wrapper">
+                    <div class="c-text-label">Audio</div><label class="w-checkbox c-checkbox-field-toggle platform">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-toggle"></div><input type="checkbox" id="Checkbox Prime" name="Checkbox-Prime" data-name="Checkbox Prime" data-filter="Prime Video" style="opacity:0;position:absolute;z-index:-1">
+                      <div data-is-ix2-target="1" class="lottie-animation" data-w-id="e1fd1f9f-be89-d749-355f-9525986732a6" data-animation-type="lottie" data-src="documents/lf20_53al6qcs.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.0166666666666666" data-duration="0" data-ix2-initial-state="50"></div><span for="Checkbox-Prime" class="c-checkbox-label-toggle w-form-label">Prime Video</span>
+                    </label>
+                  </div>
+                  <div class="c-checkbox-wrapper">
+                    <div class="c-text-label">Image</div><label class="w-checkbox c-checkbox-field-toggle platform">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-toggle"></div><input type="checkbox" id="Checkbox Disney" name="Checkbox-Disney" data-name="Checkbox Disney" data-filter="Disney +" style="opacity:0;position:absolute;z-index:-1">
+                      <div data-is-ix2-target="1" class="lottie-animation" data-w-id="ba52c68f-20e9-740d-bb29-b9815c066c8c" data-animation-type="lottie" data-src="documents/lf20_53al6qcs.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.0166666666666666" data-duration="0" data-ix2-initial-state="50"></div><span for="Checkbox-Disney" class="c-checkbox-label-toggle w-form-label">Disney +</span>
+                    </label>
+                  </div>
+                  <div class="c-checkbox-wrapper">
+                    <div class="c-text-label">Video</div><label class="w-checkbox c-checkbox-field-toggle platform">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-toggle"></div><input type="checkbox" id="Checkbox Max" name="Checkbox-Max" data-name="Checkbox Max" data-filter="HBO Max" style="opacity:0;position:absolute;z-index:-1">
+                      <div data-is-ix2-target="1" class="lottie-animation" data-w-id="22bcf8ed-b910-ac2c-27a8-70c39450cc84" data-animation-type="lottie" data-src="documents/lf20_53al6qcs.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.0166666666666666" data-duration="0" data-ix2-initial-state="50"></div><span for="Checkbox-Max" class="c-checkbox-label-toggle w-form-label">HBO Max</span>
+                    </label>
+                  </div>
+                  <div class="c-checkbox-wrapper">
+                    <div class="c-text-label">Newspaper</div><label class="w-checkbox c-checkbox-field-toggle platform">
+                      <div class="w-checkbox-input w-checkbox-input--inputType-custom c-checkbox-toggle"></div><input type="checkbox" id="Checkbox Paramount" name="Checkbox-Paramount" data-name="Checkbox Paramount" data-filter="Paramount +" style="opacity:0;position:absolute;z-index:-1">
+                      <div data-is-ix2-target="1" class="lottie-animation" data-w-id="9ae27037-7fae-2b2c-0ea2-cfa25be78f69" data-animation-type="lottie" data-src="documents/lf20_53al6qcs.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.0166666666666666" data-duration="0" data-ix2-initial-state="50"></div><span for="Checkbox-Paramount" class="c-checkbox-label-toggle w-form-label">Paramount +</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="c-filter">
+                <div class="c-title-wrapper">
+                  <div class="c-premiere-icon"><img src="images/Calendar.svg" loading="lazy" alt="" class="c-filter-icon"></div>
+                  <div class="c-premiere-title">
+                    <h3 class="c-title-3">Release Year</h3>
+                  </div>
+                </div>
+                <div class="c-year-slider">
+                  <div double="1" r-filter="range" min-value="2005" max-value="2021" class="c-range-wrapper"></div>
+                  <div class="c-years-wrapper">
+                    <div class="c-year">
+                      <div class="c-year-output">
+                        <div r-filter-range-min="1" class="c-year-output-text">1700</div>
+                      </div>
+                    </div>
+                    <div class="c-year cc-max-price">
+                      <div class="c-year-output">
+                        <div r-filter-range-max="1" class="c-year-output-text">2021</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+        </div>
+        <div data-w-id="cd7d8c14-ac0d-4b9b-b32a-d18e9080a87e" style="opacity:0;-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="c-grid-item cc-60">
+          <div class="c-collection-itemcount">
+            <p class="c-paragraph cc-count">Showing<br></p>
+            <p r-filter-visible-elements="1" class="c-paragraph cc-count"></p>
+            <p class="c-paragraph cc-count">of</p>
+            <p r-filter-total-elements="1" class="c-paragraph cc-count"></p>
+            <p class="c-paragraph cc-count">results</p>
+          </div>
+          <div class="c-collection-wrapper-movies w-dyn-list">
+            <div r-filter-pagination="8" r-filter-wrapper="1" role="list" class="c-collection-list-movies w-dyn-items">
+              <div id="w-node-_8a9a099a-37ab-2b2d-1a5f-5b0fc73529c2-003bb71f" role="listitem" class="c-collection-item-movies w-dyn-item">
+                <div data-w-id="9cce4105-adec-3141-4211-557c37a462ff" class="c-gradient-card">
+                  <div style="width:100%;height:100%" class="c-gradient-top"></div>
+                  <div style="opacity:0;width:0%;height:0%" class="c-gradient-bottom"></div>
+                  <div class="c-card">
+                    <div class="c-card-platforms">
+                      <div class="c-nested-list-wrapper w-dyn-list">
+                        <div role="list" class="c-nested-list w-dyn-items">
+                          <div role="listitem" class="c-nested-item w-dyn-item">
+                            <p r-indexed="Platform" class="c-title-4 cc-gray500 cc-card-padding cc-hidden"></p>
+                            <div class="c-card-platform-icon"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-card-image"><img src="" loading="lazy" alt="" class="c-card-image_img">
+                      <div class="overlay"></div>
+                    </div>
+                    <div class="c-card-bottom">
+                      <div class="c-title-wrapper cc-card-flex">
+                        <h3 r-indexed="input" class="c-title-3"></h3>
+                        <div class="c-card-details cc-hidden">
+                          <p r-indexed="select" class="c-title-4 cc-gray500 cc-card-padding"></p>
+                          <p r-indexed="Checkbox" class="c-title-4 cc-gray500 cc-card-padding"></p>
+                          <p r-indexed="Platform" class="c-title-4 cc-gray500 cc-card-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                          <p r-indexed="Star" class="c-title-4 cc-gray500 cc-card-padding"></p>
+                        </div>
+                        <div class="c-card-details">
+                          <p r-indexed="range" class="c-title-4 cc-gray500"></p>
+                          <p class="c-title-4 cc-gray500 cc-card-padding">.</p>
+                          <p r-indexed="Languages" class="c-title-4 cc-gray500 cc-card-padding"></p>
+                          <p class="c-title-4 cc-gray500 cc-card-padding">.</p>
+                          <p r-indexed="Genre" class="c-title-4 cc-gray500 cc-card-padding"></p>
+                        </div>
+                      </div>
+                      <div class="c-card-rating">
+                        <div class="c-card-rating-star"><img src="images/Star-bright.svg" loading="lazy" id="star" alt="" class="c-star-shadow"><img src="images/Star-dark.svg" loading="lazy" alt="" class="c-star-shadow cc-notrated"></div>
+                        <div class="c-card-rating-star"><img src="images/Star-bright.svg" loading="lazy" id="star" alt="" class="c-star-shadow"><img src="images/Star-dark.svg" loading="lazy" alt="" class="c-star-shadow cc-notrated"></div>
+                        <div class="c-card-rating-star"><img src="images/Star-bright.svg" loading="lazy" id="star" alt="" class="c-star-shadow"><img src="images/Star-dark.svg" loading="lazy" alt="" class="c-star-shadow cc-notrated"></div>
+                        <div class="c-card-rating-star"><img src="images/Star-bright.svg" loading="lazy" id="star" alt="" class="c-star-shadow"><img src="images/Star-dark.svg" loading="lazy" alt="" class="c-star-shadow cc-notrated"></div>
+                        <div class="c-card-rating-star"><img src="images/Star-bright.svg" loading="lazy" id="star" alt="" class="c-star-shadow"><img src="images/Star-dark.svg" loading="lazy" alt="" class="c-star-shadow cc-notrated"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+          <div r-filter-empty="1" data-w-id="80db50af-0de9-1d98-45fe-5f2fe7dc5208" style="opacity:0" class="c-filter_empty">
+            <div class="c-empty-content">
+              <div class="c-emoji"><img src="images/emoji-sleepy.svg" loading="lazy" alt="Sleepy Emoji." class="c-emoji-image"></div>
+              <div class="c-title-wrapper cc-margin">
+                <p class="c-title-1 cc-center">Nothing for you,<br>time to go to bed.</p>
+              </div>
+              <div class="c-paragraph-wrapper">
+                <p class="c-title-3 cc-gray500 cc-center">Please try selecting different filters</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-pagination-wrapper">
+            <div r-pagination="1" class="c-pagination">
+              <div r-pagination-arrow-prev="1" class="c-pagination_arrow-prev"></div>
+              <div r-pagination-arrow-next="1" class="c-pagination_arrow-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="c-copy">
+    <div class="text-block-2">Link kopiert!</div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6311249bb727571ee13bb71c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://tools.refokus.com/cms-filter/bundle.v1.0.0.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+// when document is fully loaded
+$( document ).ready(function() {
+$('.c-slider').slick({
+  dots: false,
+  speed: 700,
+  infinite: true,
+  variableWidth: true,
+	slidesToShow: 1,
+  swipeToSlide: true,
+  arrows: true,
+  prevArrow: $('.slider-prev'),
+ 	nextArrow: $('.slider-next'),
+  responsive: [
+    {
+      // landscape
+      breakpoint: 767,
+      settings: {
+      	centerMode: true,
+        slidesToShow: 3,
+        arrows: true,
+      }
+    },
+    {
+      // mobile portrait
+      breakpoint: 479,
+      settings: {
+      	centerMode: true,
+        slidesToShow: 3,
+        arrows: true,
+      }
+    }
+  ]
+});
+});
+</script>
+  <!--  Prevent Body Scroll  -->
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+ document.querySelectorAll('.open-modal').forEach(trigger => {
+  trigger.addEventListener('click', function(){ 
+    document.querySelectorAll('.c-body').forEach(target => target.classList.add('no-scroll')); 
+  });
+ });
+ document.querySelectorAll('.close-modal').forEach(trigger => {
+  trigger.addEventListener('click', function(){ 
+    document.querySelectorAll('.c-body').forEach(target => target.classList.remove('no-scroll')); 
+  });
+ });
+});
+</script>
+  <!--  Prevent Form from submitting Data  -->
+  <script>
+$('#search-form').submit(function(e){
+    return false;
+});
+</script>
+  <!--  Share Function  -->
+  <script>
+const tweetData = {
+    url: window.location.href,
+    title: 'How do you add CMS Filters in @Webflow? @RefokusAgency made a tool for that! https://webflow-tools.refokus.io/tools/cms-filters #madeinwebflow'
+  }
+$('[share-tw]').attr('href','https://twitter.com/share?'+$.param(tweetData))
+$('[share-in]').attr('href','https://www.linkedin.com/shareArticle?mini=true&'+$.param(tweetData))
+$('[copy-clipboard]').click(function(evt){
+	evt.preventDefault()
+	copyToClipboard($(this)[0], tweetData.url)
+})
+</script>
+</body>
+</html>
